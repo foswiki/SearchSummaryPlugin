@@ -74,7 +74,7 @@ sub makeTopicSummary {
                     split( /[\s]+/, $terms ));
     }
 
-    $keystrs = "(?i:$keystrs)" unless TWiki::isTrue($params{casesensitive});
+    $keystrs = "(?i:$keystrs)" unless TWiki::Func::isTrue($params{casesensitive});
 
     if ($topic =~ /$keystrs/) {
         # IF the matching string data is in the topic name summary
